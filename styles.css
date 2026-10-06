@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mahlori Makwakwa's professional portfolio website showcasing skills, experience, projects, education, certifications, and contact information."
+    />
+    <title>Mahlori Makwakwa | Professional Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand" aria-label="Mahlori Makwakwa home">
+          <span class="brand-mark">M</span>
+          <span>Mahlori</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Available for internships & graduate opportunities</p>
+            <h1>
+              Hi, I'm <span>Mahlori Makwakwa</span><br />
+              Building digital experiences with purpose.
+            </h1>
+            <p class="lead">
+              I am a motivated technology professional focused on software development,
+              problem-solving, and creating user-centered digital solutions that make a real impact.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn btn-secondary" href="Mahlori_Makwakwa_CV.txt" download>Download CV</a>
+            </div>
+
+            <ul class="hero-stats" aria-label="Career stats">
+              <li><strong>3+</strong><span>Years Learning</span></li>
+              <li><strong>8+</strong><span>Projects</span></li>
+              <li><strong>100%</strong><span>Driven</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Profile visual card">
+            <div class="profile-card">
+              <div class="profile-badge">Software Developer</div>
+              <div class="avatar-wrap">
+                <div class="avatar">MM</div>
+              </div>
+              <h2>Mahlori Makwakwa</h2>
+              <p>Technology Enthusiast • Problem Solver • Future-focused Builder</p>
+              <div class="mini-grid">
+                <div>
+                  <span>Focus</span>
+                  <strong>Web & Data</strong>
+                </div>
+                <div>
+                  <span>Tools</span>
+                  <strong>JS, Python, SQL</strong>
+                </div>
+                <div>
+                  <span>Interests</span>
+                  <strong>AI, Cloud, UX</strong>
+                </div>
+                <div>
+                  <span>Location</span>
+                  <strong>South Africa</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">About Me</p>
+            <h2>Professional, curious, and ready to build.</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                I am a self-driven professional with a passion for technology, design, and continuous learning.
+                My strengths lie in understanding real-world problems, turning ideas into functional digital experiences,
+                and collaborating effectively in team environments.
+              </p>
+              <p>
+                I enjoy working across the full digital lifecycle—from the initial concept and UX thinking to implementation,
+                testing, and deployment. I thrive in environments that require creativity, technical thinking, and a strong
+                focus on delivering value to users and businesses.
+              </p>
+            </div>
+
+            <div class="about-points">
+              <div class="point-card">
+                <span class="point-icon">✓</span>
+                <div>
+                  <h3>Goal-driven</h3>
+                  <p>I focus on practical outcomes that align with user needs and business goals.</p>
+                </div>
+              </div>
+              <div class="point-card">
+                <span class="point-icon">✓</span>
+                <div>
+                  <h3>Adaptable</h3>
+                  <p>I quickly learn new tools, frameworks, and workflows in fast-moving environments.</p>
+                </div>
+              </div>
+              <div class="point-card">
+                <span class="point-icon">✓</span>
+                <div>
+                  <h3>Collaborative</h3>
+                  <p>I value clear communication, teamwork, and turning ideas into useful products.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section alt-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Skills</p>
+            <h2>Technical and soft skills that support growth.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h3>Technical Skills</h3>
+              <ul>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript & TypeScript</li>
+                <li>Python</li>
+                <li>SQL & Database Fundamentals</li>
+                <li>Git & GitHub</li>
+                <li>Responsive Web Design</li>
+                <li>REST APIs</li>
+                <li>UI/UX Fundamentals</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <h3>Soft Skills</h3>
+              <ul>
+                <li>Communication</li>
+                <li>Time Management</li>
+                <li>Critical Thinking</li>
+                <li>Problem Solving</li>
+                <li>Team Collaboration</li>
+                <li>Learning Agility</li>
+                <li>Attention to Detail</li>
+                <li>Professionalism</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <h3>Tools & Platforms</h3>
+              <ul>
+                <li>VS Code</li>
+                <li>Figma</li>
+                <li>GitHub</li>
+                <li>Excel / Data Analysis</li>
+                <li>Canva</li>
+                <li>Microsoft Office</li>
+                <li>Cloud Fundamentals</li>
+                <li>Project Planning</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2>Selected work that reflects my skills and goals.</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-tag">Trading Automation</div>
+              <h3>K1 Trading Robot</h3>
+              <p>
+                A multi-market automated trading solution designed for MetaTrader 5. The project focused on
+                strategy implementation, market analysis, and automation for diversified financial instruments.
+              </p>
+              <div class="tech-stack">
+                <span>MT5</span>
+                <span>Trading Logic</span>
+                <span>Automation</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-tag">Analytics Dashboard</div>
+              <h3>Smart Inventory Dashboard</h3>
+              <p>
+                A business-facing dashboard concept for monitoring product movement, stock trends, and operational
+                performance using data-driven visual insights.
+              </p>
+              <div class="tech-stack">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Dashboards</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-tag">Portfolio Website</div>
+              <h3>Professional Portfolio</h3>
+              <p>
+                A modern personal portfolio designed to present a professional identity, work samples, achievements,
+                and modern design aesthetics suitable for internship and employment applications.
+              </p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section alt-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Education</p>
+            <h2>Academic foundation and continuous development.</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="year">2020 - 2024</span>
+              <div>
+                <h3>Bachelor's Degree / Relevant Field of Study</h3>
+                <p>University or Institution Name</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="year">2016 - 2019</span>
+              <div>
+                <h3>Secondary Education</h3>
+                <p>School Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="certifications" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Certifications</p>
+            <h2>Validated skills and professional development.</h2>
+          </div>
+
+          <div class="cert-grid">
+            <div class="cert-item">Google Data Analytics</div>
+            <div class="cert-item">AWS Cloud Practitioner</div>
+            <div class="cert-item">Microsoft Azure Fundamentals</div>
+            <div class="cert-item">Agile & Scrum Fundamentals</div>
+            <div class="cert-item">Responsive Web Design</div>
+            <div class="cert-item">Python for Everybody</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section alt-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Work Experience</p>
+            <h2>Experience that reflects initiative and professionalism.</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="year">2024 - Present</span>
+              <div>
+                <h3>Junior Software Developer / Technical Intern</h3>
+                <p>Improved workflow efficiency by supporting digital solution development, troubleshooting, and documentation.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="year">2023 - 2024</span>
+              <div>
+                <h3>Freelance / Personal Projects</h3>
+                <p>Designed and delivered self-driven development projects focused on automation, data, and user experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Contact</p>
+            <h2>Let's connect and build something meaningful.</h2>
+          </div>
+
+          <div class="contact-card">
+            <a href="mailto:mahlori.makwakwa@example.com">mahlori.makwakwa@example.com</a>
+            <a href="https://github.com/DASHTECHSOLUTION" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+            <p>Based in South Africa • Open to internships and junior opportunities</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Mahlori Makwakwa</p>
+        <p>Built with purpose, creativity, and a drive to learn.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
