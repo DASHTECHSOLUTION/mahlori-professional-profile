@@ -1,332 +1,651 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Mahlori Makwakwa is an aspiring IT Support professional with experience in systems support, web development, cybersecurity awareness, and technical troubleshooting." />
-    <title>Mahlori Makwakwa | Aspiring IT Support Professional</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="#home" class="brand" aria-label="Mahlori Makwakwa homepage">
-          <span class="brand-mark">M</span>
-          <span>Mahlori</span>
-        </a>
+/* =============================================================
+   DESIGN TOKENS  (matching Vuketech colour scheme)
+   ============================================================= */
+:root {
+  --bg-dark:    #000814;
+  --bg-darker:  #00040a;
+  --card:       #0d1b2a;
+  --card-hover: #12253a;
+  --text:       #e8edf5;
+  --text-muted: #8b9bb4;
+  --accent:     #FFC300;
+  --accent-2:   #73c5eb;
+  --border:     rgba(255, 195, 0, 0.15);
+  --shadow:     0 20px 45px rgba(0, 0, 0, 0.45);
+  --radius:     16px;
+  --header-h:   76px;
+}
 
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        <nav class="site-nav" aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#education">Education</a>
-          <a href="#certificates">Certificates</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 
-    <main>
-      <section id="home" class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Aspiring IT Support Technician</p>
-            <h1>
-              I help people and systems work better,<br />
-              <span>one technical solution at a time.</span>
-            </h1>
-            <p class="lead">
-              I am a motivated and people-focused IT support aspirant with a strong interest in troubleshooting,
-              desktop support, system maintenance, networking, cybersecurity awareness, and user support. I enjoy solving
-              technical problems, supporting digital environments, and helping teams work efficiently through reliable IT systems.
-            </p>
+body {
+  font-family: 'Open Sans', system-ui, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
 
-            <div class="cta-row">
-              <a class="btn btn-primary" href="#contact">Hire Me</a>
-              <a class="btn btn-secondary" href="Mahlori_Makwakwa_CV.txt" download>Download CV</a>
-            </div>
+h1, h2, h3, h4 { font-family: 'Jost', sans-serif; line-height: 1.2; }
 
-            <div class="contact-pills">
-              <a href="tel:+27661408333">066 140 8333</a>
-              <a href="mailto:deshmakwakwa98@gmail.com">deshmakwakwa98@gmail.com</a>
-            </div>
-          </div>
+a { color: var(--accent); text-decoration: none; transition: color .3s; }
+a:hover { color: var(--accent-2); }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
 
-          <div class="hero-visual">
-            <div class="portrait-card">
-              <div class="portrait-frame">
-                <img src="images/profile-photo.svg" alt="Mahlori Makwakwa portrait" onerror="this.src='images/profile-photo.svg';" />
-              </div>
-              <div class="snapshot-box">
-                <strong>Mahlori Makwakwa</strong>
-                <span>IT Support • Web • Cyber Awareness</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+.container {
+  width: min(1180px, calc(100% - 2rem));
+  margin-inline: auto;
+}
 
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">About Me</p>
-            <h2>Professional, patient, and ready to support people and systems.</h2>
-          </div>
+/* =============================================================
+   HEADER  (fixed, with hamburger)
+   ============================================================= */
+.fixed-top {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 999;
+  background: rgba(0, 8, 20, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: background .3s;
+}
 
-          <div class="about-grid">
-            <div class="about-text">
-              <p>
-                I am an aspiring IT support professional with a practical understanding of troubleshooting, user support,
-                desktop support, device maintenance, and digital problem-solving. I enjoy working with technology in ways that
-                improve everyday efficiency and reduce frustration for users and teams.
-              </p>
-              <p>
-                My background includes entry-level technical experience in IT support, cybersecurity awareness, web development,
-                and systems thinking. I am also confident in using common productivity and troubleshooting tools to resolve
-                technical issues, support users, and maintain stable digital environments.
-              </p>
-            </div>
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+}
 
-            <div class="highlight-panel">
-              <div class="mini-stat">
-                <strong>IT Support</strong>
-                <span>Hardware, software, troubleshooting</span>
-              </div>
-              <div class="mini-stat">
-                <strong>Cyber Awareness</strong>
-                <span>Threat awareness and safe systems</span>
-              </div>
-              <div class="mini-stat">
-                <strong>Web Development</strong>
-                <span>HTML, CSS, JavaScript, Django</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+/* --- Logo --- */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+  letter-spacing: -.02em;
+}
+.logo-mark {
+  display: grid;
+  place-items: center;
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), #ff9f1c);
+  color: #000814;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+.logo-text { color: #fff; }
 
-      <section id="skills" class="section alt-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Skills</p>
-            <h2>Technical and interpersonal strengths that support IT service excellence.</h2>
-          </div>
+/* --- Nav links (desktop) --- */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-link {
+  font-size: .92rem;
+  font-weight: 500;
+  color: #d6d6d6;
+  position: relative;
+  padding: .25rem 0;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 2px;
+  background: var(--accent);
+  transition: width .3s;
+}
+.nav-link:hover, .nav-link.active { color: var(--accent); }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
-          <div class="skills-grid">
-            <div class="skill-card">
-              <h3>IT Support Skills</h3>
-              <ul>
-                <li>Desktop support</li>
-                <li>Hardware diagnostics</li>
-                <li>Software installation and setup</li>
-                <li>User account support</li>
-                <li>Password and access support</li>
-                <li>System troubleshooting</li>
-                <li>Remote support tools</li>
-                <li>Performance monitoring</li>
-              </ul>
-            </div>
+/* --- CTA button in nav --- */
+.getstarted {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .5rem 1.2rem;
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all .3s;
+}
+.getstarted:hover {
+  background: var(--accent);
+  color: #000814;
+}
 
-            <div class="skill-card">
-              <h3>Technical Skills</h3>
-              <ul>
-                <li>Microsoft Office</li>
-                <li>Windows troubleshooting</li>
-                <li>Basic networking</li>
-                <li>Python and JavaScript</li>
-                <li>HTML, CSS, and front-end basics</li>
-                <li>Django and React fundamentals</li>
-                <li>Cybersecurity awareness</li>
-                <li>Ticketing and service workflow</li>
-              </ul>
-            </div>
+/* --- Hamburger icon (hidden on desktop) --- */
+.mobile-nav-toggle {
+  display: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform .3s;
+}
+.mobile-nav-toggle.bi-x { transform: rotate(90deg); }
 
-            <div class="skill-card">
-              <h3>Soft Skills</h3>
-              <ul>
-                <li>Communication</li>
-                <li>Patience and empathy</li>
-                <li>Teamwork</li>
-                <li>Problem solving</li>
-                <li>Attention to detail</li>
-                <li>Learning agility</li>
-                <li>Professionalism</li>
-                <li>Reliability</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section id="experience" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Experience</p>
-            <h2>Hands-on learning and practical technical exposure.</h2>
-          </div>
+/* =============================================================
+   HERO
+   ============================================================= */
+.hero-section {
+  padding: 9rem 0 5rem;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,195,0,.06), transparent 55%),
+    radial-gradient(circle at 80% 60%, rgba(115,197,235,.05), transparent 55%);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .4rem .9rem;
+  border-radius: 999px;
+  background: rgba(255,195,0,.08);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+.hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  letter-spacing: -.03em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.highlight { color: var(--accent); }
+.hero-subtitle {
+  color: var(--text-muted);
+  max-width: 58ch;
+  font-size: 1.02rem;
+  margin-bottom: 1.8rem;
+}
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem;
+  margin-bottom: 1.6rem;
+}
+.hero-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: .9rem;
+  color: var(--text-muted);
+}
+.hero-contact a { color: var(--text-muted); display: inline-flex; align-items: center; gap: .35rem; }
+.hero-contact a:hover { color: var(--accent); }
 
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="year">2024</span>
-              <div>
-                <h3>Internship | Junior Software Developer</h3>
-                <p>AVU Department, University of Johannesburg</p>
-                <ul class="experience-list">
-                  <li>Developed and maintained responsive web applications using Django and React.</li>
-                  <li>Built RESTful APIs and connected frontend systems to backend services.</li>
-                  <li>Implemented troubleshooting, testing, and debugging procedures.</li>
-                  <li>Supported secure access control, system logic, and front-end functionality.</li>
-                </ul>
-              </div>
-            </div>
+/* --- Portrait card --- */
+.hero-visual { display: flex; justify-content: center; }
+.portrait-card {
+  width: min(100%, 380px);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.portrait-frame {
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d1b2a, #12253a);
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portrait-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.portrait-caption {
+  text-align: center;
+  padding-top: .9rem;
+}
+.portrait-caption strong { display: block; color: #fff; font-size: 1.05rem; }
+.portrait-caption span { color: var(--text-muted); font-size: .85rem; }
 
-            <div class="timeline-item">
-              <span class="year">2025</span>
-              <div>
-                <h3>Technical Support & Website Support</h3>
-                <p>Volunteer / Project Work</p>
-                <ul class="experience-list">
-                  <li>Designed and developed a healthcare website to enhance digital presence and accessibility.</li>
-                  <li>Worked on responsiveness, performance, and content alignment for end-user needs.</li>
-                  <li>Applied problem-solving and troubleshooting to improve online functionality and usability.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section id="projects" class="section alt-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Projects</p>
-            <h2>Recent work that shows initiative, service mindset, and technical capability.</h2>
-          </div>
+/* =============================================================
+   BUTTONS
+   ============================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .8rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: .92rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform .2s, box-shadow .2s, background .3s, color .3s;
+}
+.btn:hover { transform: translateY(-2px); }
 
-          <div class="projects-grid">
-            <article class="project-card">
-              <span class="project-tag">Website Development</span>
-              <h3>RSM Healthcare Website</h3>
-              <p>
-                Developed and improved a business website focused on service visibility, responsive design, and patient accessibility.
-              </p>
-              <div class="tech-stack">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>Responsive UI</span>
-              </div>
-            </article>
+.btn-primary {
+  background: var(--accent);
+  color: #000814;
+  box-shadow: 0 12px 28px rgba(255,195,0,.25);
+}
+.btn-primary:hover {
+  background: #ffd23f;
+  color: #000814;
+}
 
-            <article class="project-card">
-              <span class="project-tag">Software Development</span>
-              <h3>Web Applications with Django & React</h3>
-              <p>
-                Built applications with RESTful API integration, database handling, and modern user-facing interfaces.
-              </p>
-              <div class="tech-stack">
-                <span>Django</span>
-                <span>React</span>
-                <span>API</span>
-              </div>
-            </article>
+.btn-outline {
+  border-color: var(--border);
+  color: var(--accent);
+  background: transparent;
+}
+.btn-outline:hover {
+  background: var(--accent);
+  color: #000814;
+  border-color: var(--accent);
+}
 
-            <article class="project-card">
-              <span class="project-tag">Security Awareness</span>
-              <h3>Threat Monitoring & Support Mindset</h3>
-              <p>
-                Gained practical understanding of networking, monitoring, and cybersecurity awareness using SOC-related tools and principles.
-              </p>
-              <div class="tech-stack">
-                <span>Splunk</span>
-                <span>Sentinel</span>
-                <span>Security</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
 
-      <section id="education" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Education</p>
-            <h2>Academic background and formal training.</h2>
-          </div>
+/* =============================================================
+   SECTIONS
+   ============================================================= */
+.section { padding: 5.5rem 0; }
+.alt-section { background: rgba(255,255,255,.02); }
 
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="year">Current</span>
-              <div>
-                <h3>Dynamic DNA</h3>
-                <p>NQF Level 4: Systems Development</p>
-              </div>
-            </div>
+.section-heading { margin-bottom: 2.5rem; max-width: 680px; }
+.section-heading.center { text-align: center; margin-inline: auto; }
 
-            <div class="timeline-item">
-              <span class="year">2019</span>
-              <div>
-                <h3>Langa Secondary School</h3>
-                <p>Grade 12 (Matric)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+.eyebrow {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .6rem;
+}
+.section-heading h2 {
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  letter-spacing: -.03em;
+  color: #fff;
+}
+.section-heading p { color: var(--text-muted); margin-top: .6rem; }
 
-      <section id="certificates" class="section alt-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Certificates</p>
-            <h2>Professional certifications and learning milestones.</h2>
-          </div>
 
-          <div class="cert-grid">
-            <div class="cert-item">Junior Cybersecurity Path</div>
-            <div class="cert-item">Ethical Hacking</div>
-            <div class="cert-item">Basic Network & Configurations</div>
-            <div class="cert-item">Python Essentials</div>
-            <div class="cert-item">JavaScript Essentials</div>
-            <div class="cert-item">CSS Essentials</div>
-          </div>
-        </div>
-      </section>
+/* =============================================================
+   ABOUT
+   ============================================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.about-text p {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  margin-bottom: 1.1rem;
+}
+.highlight-panel { display: grid; gap: 1rem; }
+.mini-stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  transition: transform .25s, border-color .25s;
+}
+.mini-stat:hover { transform: translateY(-4px); border-color: var(--accent); }
+.mini-stat i { font-size: 1.5rem; color: var(--accent); }
+.mini-stat strong { display: block; color: #fff; }
+.mini-stat span { color: var(--text-muted); font-size: .88rem; }
 
-      <section id="contact" class="section contact-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Contact</p>
-            <h2>Let’s connect and support your next digital step.</h2>
-          </div>
 
-          <div class="contact-card">
-            <a href="tel:+27661408333">066 140 8333</a>
-            <a href="mailto:deshmakwakwa98@gmail.com">deshmakwakwa98@gmail.com</a>
-            <a href="https://github.com/DASHTECHSOLUTION" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-            <p>Tembisa, Johannesburg, South Africa</p>
-          </div>
-        </div>
-      </section>
-    </main>
+/* =============================================================
+   SKILLS
+   ============================================================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.skill-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  transition: transform .25s, border-color .25s, background .25s;
+}
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  background: var(--card-hover);
+}
+.skill-icon {
+  width: 48px; height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(255,195,0,.1);
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.skill-card h3 { color: #fff; margin-bottom: .9rem; font-size: 1.15rem; }
+.skill-card li {
+  color: var(--text-muted);
+  font-size: .92rem;
+  padding: .28rem 0 .28rem 1.1rem;
+  position: relative;
+}
+.skill-card li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .85rem;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
 
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p>© <span id="year"></span> Mahlori Makwakwa</p>
-        <p>IT support aspirant • problem solver • technology learner</p>
-      </div>
-    </footer>
 
-    <script src="script.js"></script>
-  </body>
-</html>
+/* =============================================================
+   PROJECTS
+   ============================================================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  transition: transform .25s, border-color .25s;
+}
+.project-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.project-tag {
+  align-self: flex-start;
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  background: rgba(255,195,0,.1);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: .9rem;
+}
+.project-card h3 { color: #fff; margin-bottom: .6rem; }
+.project-card p { color: var(--text-muted); font-size: .93rem; }
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: auto;
+  padding-top: 1.2rem;
+}
+.tech-stack span {
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .3rem .65rem;
+  border-radius: 999px;
+  background: rgba(255,195,0,.06);
+  border: 1px solid var(--border);
+  color: var(--accent);
+}
+
+
+/* =============================================================
+   TIMELINE  (experience + education)
+   ============================================================= */
+.timeline { display: grid; gap: 1.2rem; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color .25s;
+}
+.timeline-item:hover { border-color: var(--accent); }
+.timeline-year {
+  align-self: start;
+  text-align: center;
+  padding: .45rem .5rem;
+  border-radius: 999px;
+  background: rgba(255,195,0,.1);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: .82rem;
+}
+.timeline-content h3 { color: #fff; margin-bottom: .25rem; }
+.timeline-place {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: .9rem;
+  margin-bottom: .6rem;
+}
+.timeline-content ul { display: grid; gap: .35rem; margin-top: .5rem; }
+.timeline-content li {
+  color: var(--text-muted);
+  font-size: .9rem;
+  padding-left: 1.1rem;
+  position: relative;
+}
+.timeline-content li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .75rem;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+
+/* =============================================================
+   CERTIFICATIONS
+   ============================================================= */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.cert-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  min-height: 90px;
+  text-align: center;
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: #fff;
+  font-weight: 600;
+  font-size: .92rem;
+  transition: transform .25s, border-color .25s;
+}
+.cert-item:hover { transform: translateY(-4px); border-color: var(--accent); }
+.cert-item i { color: var(--accent); font-size: 1.2rem; }
+
+
+/* =============================================================
+   CONTACT
+   ============================================================= */
+.contact-card {
+  max-width: 640px;
+  margin-inline: auto;
+  display: grid;
+  gap: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 2.2rem;
+}
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: color .3s;
+}
+.contact-row i { color: var(--accent); font-size: 1.1rem; }
+a.contact-row:hover { color: var(--accent); }
+.contact-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: .6rem;
+}
+
+
+/* =============================================================
+   FOOTER
+   ============================================================= */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.6rem 0;
+  background: var(--bg-darker);
+}
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: .85rem;
+  color: var(--text-muted);
+}
+
+
+/* =============================================================
+   BACK TO TOP
+   ============================================================= */
+.back-to-top {
+  position: fixed;
+  right: 18px; bottom: 18px;
+  width: 44px; height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #000814;
+  font-size: 1.1rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all .3s;
+  z-index: 998;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { background: #ffd23f; }
+
+
+/* =============================================================
+   MOBILE NAVIGATION  (full-screen overlay, like Vuketech)
+   ============================================================= */
+@media (max-width: 991px) {
+
+  /* Show hamburger, hide desktop links */
+  .mobile-nav-toggle { display: block; }
+  .nav-menu { display: none; }
+
+  /* When menu is open, this class is added to .navbar */
+  .navbar.navbar-mobile {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(0, 8, 20, 0.98);
+    backdrop-filter: blur(14px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .3s;
+  }
+
+  /* Close button inside overlay */
+  .navbar.navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 18px; right: 20px;
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  /* Menu list inside overlay */
+  .navbar.navbar-mobile .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .navbar.navbar-mobile .nav-link {
+    font-size: 1.15rem;
+    color: #d6d6d6;
+    padding: .5rem 0;
+  }
+  .navbar.navbar-mobile .nav-link.active,
+  .navbar.navbar-mobile .nav-link:hover {
+    color: var(--accent);
+  }
+
+  .navbar.navbar-mobile .getstarted {
+    margin-top: .8rem;
+    font-size: 1rem;
+    padding: .7rem 1.6rem;
+  }
+
+  /* Layout adjustments */
+  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+  .hero-cta, .hero-contact { justify-content: center; }
+  .hero-subtitle { margin-inline: auto; }
+  .about-grid { grid-template-columns: 1fr; }
+  .skills-grid, .projects-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .skills-grid, .projects-grid { grid-template-columns: 1fr; }
+  .timeline-item { grid-template-columns: 1fr; gap: .8rem; }
+  .timeline-year { justify-self: start; }
+  .section { padding: 4rem 0; }
+  .hero-section { padding-top: 7rem; }
+  .btn { width: 100%; }
+  .hero-cta { flex-direction: column; }
+  .contact-social { flex-direction: column; }
+}
