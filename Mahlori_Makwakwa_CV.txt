@@ -1,21 +1,16 @@
-const navToggle = document.querySelector('.nav-toggle');
-const siteNav = document.querySelector('.site-nav');
-const yearEl = document.getElementById('year');
-
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
-}
-
-if (navToggle && siteNav) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = siteNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  siteNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      siteNav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" fill="#EDF3FB"/>
+  <circle cx="400" cy="382" r="180" fill="#D9B38C"/>
+  <ellipse cx="400" cy="370" rx="188" ry="210" fill="#E7C29A"/>
+  <path d="M265 385C265 292.532 335.532 222 428 222H472C564.468 222 635 292.532 635 385V430C635 521.926 563.926 593 472 593H428C335.532 593 265 521.926 265 430V385Z" fill="#111827"/>
+  <rect x="245" y="530" width="310" height="220" rx="78" fill="#F3F4F6"/>
+  <path d="M238 690C310.274 625.804 382.09 593 453.447 593C529.77 593 592.825 626.558 642.609 693.672L653 706.5V1000H147V710.5L238 690Z" fill="#F9FAFB"/>
+  <path d="M275 560H527V600H275V560Z" fill="#111827"/>
+  <path d="M340 338C340 294.863 374.863 260 418 260H482C525.137 260 560 294.863 560 338V381C560 423.136 525.137 458 482 458H418C374.863 458 340 423.136 340 381V338Z" fill="#D8B08A"/>
+  <path d="M310 330C310 262.061 366.061 206 434 206H457C524.939 206 581 262.061 581 330V336H310V330Z" fill="#0F172A"/>
+  <path d="M350 286C376.497 253.909 410.563 236 453.96 236C494.908 236 528.708 253.005 555.36 287.113L535 310.5C512.939 283.126 489.91 269 455.728 269C416.384 269 386.39 287.671 370.639 321.239L350 286Z" fill="#1F2937"/>
+  <circle cx="395" cy="356" r="8" fill="#1F2937"/>
+  <circle cx="486" cy="356" r="8" fill="#1F2937"/>
+  <path d="M398 405C418.833 419.333 441.167 419.333 465 405" stroke="#8B5E3C" stroke-width="7" stroke-linecap="round"/>
+  <path d="M330 510C359.945 533.567 386.211 545.65 408.798 546.25C431.223 546.854 461.365 533.242 500.223 505.412" stroke="#D4A57A" stroke-width="12" stroke-linecap="round"/>
+</svg>

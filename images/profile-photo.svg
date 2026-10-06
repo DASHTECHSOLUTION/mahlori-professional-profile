@@ -1,0 +1,25 @@
+# Mahlori Makwakwa | Professional Portfolio
+
+A polished, responsive personal portfolio focused on an aspiring IT support professional profile, with emphasis on troubleshooting, systems support, web development, and cybersecurity awareness.
+
+## Features
+- Responsive light-themed design
+- Professional personal landing page
+- About, skills, project, education, certificate, and contact sections
+- Downloadable CV
+- Profile image slot ready for deployment
+
+## Run locally
+Open `index.html` directly in the browser, or use a local server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
+
+## Deployment
+Push to the repository and enable GitHub Pages from the repository settings.
+
+## Note
+The portfolio includes a ready profile image slot under `images/profile-photo.svg`. If you replace it with your actual photo in the same path, the site will display that photo automatically.
