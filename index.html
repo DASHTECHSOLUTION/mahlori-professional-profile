@@ -1,143 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahlori Makwakwa | IT Support Professional</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahlori Makwakwa | Aspiring IT Support Professional</title>
+
+  <!-- Fonts: Jost for headings, Open Sans for body (same as Vuketech) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- HEADER / HERO SECTION -->
-    <header class="hero">
-        <div class="container">
-            <h1>Mahlori Makwakwa</h1>
-            <h2>Aspiring IT Support Professional</h2>
-            <p>Motivated and service-oriented IT support aspirant with a strong interest in troubleshooting, desktop support, systems support, cybersecurity awareness, and technical problem solving. I enjoy helping people and systems work effectively, while continuing to grow in digital support, technical service, and web development.</p>
-            <a href="Mahlori_Makwakwa_CV.pdf" class="btn" download>Download My CV</a>
-        </div>
-    </header>
+  <!-- ======= HEADER (fixed, with hamburger menu) ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container header-container">
 
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <ul>
-                <li><strong>Phone:</strong> 066 140 8333</li>
-                <li><strong>Email:</strong> <a href="mailto:deshmakwakwa98@gmail.com">deshmakwakwa98@gmail.com</a></li>
-                <li><strong>Location:</strong> Tembisa, Johannesburg, South Africa</li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/DASHTECHSOLUTION" target="_blank">github.com/DASHTECHSOLUTION</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com" target="_blank">linkedin.com/in/mahlorimakwakwa</a></li>
-            </ul>
+      <!-- Logo / Brand -->
+      <a href="#hero" class="logo">
+        <span class="logo-mark">M</span>
+        <span class="logo-text">Mahlori Makwakwa</span>
+      </a>
+
+      <!-- Navigation -->
+      <nav id="navbar" class="navbar">
+        <ul class="nav-menu">
+          <li><a class="nav-link active" href="#hero">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#education">Education</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li>
+            <a class="getstarted" href="Mahlori_Makwakwa_CV.pdf" download>
+              <i class="bi bi-download"></i> Download CV
+            </a>
+          </li>
+        </ul>
+
+        <!-- Hamburger toggle icon -->
+        <i class="bi bi-list mobile-nav-toggle" id="mobileToggle" aria-label="Open menu"></i>
+      </nav>
+
+    </div>
+  </header>
+  <!-- ======= END HEADER ======= -->
+
+
+  <main>
+
+    <!-- ======= HERO SECTION ======= -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+
+          <div class="hero-content">
+            <span class="hero-badge">
+              <i class="bi bi-award"></i> Aspiring IT Support Professional
+            </span>
+
+            <h1>Hi, I'm <span class="highlight">Mahlori Makwakwa</span></h1>
+
+            <p class="hero-subtitle">
+              Motivated and service-oriented IT support aspirant with a strong interest in
+              troubleshooting, desktop support, systems support, cybersecurity awareness,
+              and technical problem solving. I enjoy helping people and systems work
+              effectively while continuing to grow in digital support, technical service,
+              and web development.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get In Touch</a>
+              <a href="Mahlori_Makwakwa_CV.pdf" class="btn btn-outline" download>
+                <i class="bi bi-file-earmark-pdf"></i> Download CV
+              </a>
+            </div>
+
+            <div class="hero-contact">
+              <a href="mailto:deshmakwakwa98@gmail.com">
+                <i class="bi bi-envelope"></i> deshmakwakwa98@gmail.com
+              </a>
+              <a href="tel:0661408333">
+                <i class="bi bi-phone"></i> 066 140 8333
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="portrait-card">
+              <div class="portrait-frame">
+                <!-- Replace with your actual photo later -->
+                <img src="images/profile-photo.svg" alt="Mahlori Makwakwa">
+              </div>
+              <div class="portrait-caption">
+                <strong>IT Support &amp; Web Development</strong>
+                <span>Tembisa, Johannesburg</span>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
+    <!-- ======= END HERO ======= -->
 
-    <!-- SKILLS SECTION -->
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>Desktop support</li>
-                <li>Hardware diagnostics</li>
-                <li>Software installation and setup</li>
-                <li>User account support</li>
-                <li>Password and access support</li>
-                <li>System troubleshooting</li>
-                <li>Remote support tools</li>
-                <li>Basic networking</li>
-                <li>Microsoft Office</li>
-                <li>Python and JavaScript</li>
-                <li>HTML, CSS, and front-end basics</li>
-                <li>Django and React fundamentals</li>
-                <li>Cybersecurity awareness</li>
-                <li>Teamwork and communication</li>
-            </ul>
+
+    <!-- ======= ABOUT SECTION ======= -->
+    <section id="about" class="section alt-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">About Me</span>
+          <h2>Helping people and systems work effectively.</h2>
         </div>
-    </section>
 
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <h3>Internship | Junior Software Developer</h3>
-            <p><strong>AVU Department, University of Johannesburg</strong></p>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am an aspiring IT Support Professional based in Tembisa, Johannesburg.
+              I have a strong passion for troubleshooting, desktop support, and
+              cybersecurity awareness. I thrive on solving technical problems and
+              ensuring that users have a seamless digital experience.
+            </p>
+            <p>
+              Alongside my IT support skills, I have practical experience in web
+              development, having built responsive applications using Django and React.
+              I am constantly learning and looking for opportunities to grow in the
+              tech industry.
+            </p>
+          </div>
+
+          <div class="highlight-panel">
+            <div class="mini-stat">
+              <i class="bi bi-headset"></i>
+              <div>
+                <strong>Desktop Support</strong>
+                <span>Hardware diagnostics &amp; software setup</span>
+              </div>
+            </div>
+            <div class="mini-stat">
+              <i class="bi bi-code-slash"></i>
+              <div>
+                <strong>Web Development</strong>
+                <span>Django, React &amp; RESTful APIs</span>
+              </div>
+            </div>
+            <div class="mini-stat">
+              <i class="bi bi-shield-lock"></i>
+              <div>
+                <strong>Cybersecurity</strong>
+                <span>Ethical hacking &amp; secure access control</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ======= END ABOUT ======= -->
+
+
+    <!-- ======= SKILLS SECTION ======= -->
+    <section id="skills" class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Skills</span>
+          <h2>Technical &amp; Professional Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <div class="skill-icon"><i class="bi bi-tools"></i></div>
+            <h3>Technical Support</h3>
             <ul>
+              <li>Desktop support</li>
+              <li>Hardware diagnostics</li>
+              <li>Software installation</li>
+              <li>User account support</li>
+              <li>System troubleshooting</li>
+              <li>Remote support tools</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon"><i class="bi bi-laptop"></i></div>
+            <h3>Development &amp; IT</h3>
+            <ul>
+              <li>Python and JavaScript</li>
+              <li>HTML, CSS, and front-end basics</li>
+              <li>Django and React fundamentals</li>
+              <li>Basic networking</li>
+              <li>Microsoft Office</li>
+              <li>Cybersecurity awareness</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon"><i class="bi bi-people"></i></div>
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Teamwork and communication</li>
+              <li>Problem-solving</li>
+              <li>Adaptability</li>
+              <li>Time management</li>
+              <li>Customer service</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- ======= END SKILLS ======= -->
+
+
+    <!-- ======= PROJECTS SECTION ======= -->
+    <section id="projects" class="section alt-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Projects</span>
+          <h2>What I've Built</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <span class="project-tag">Web Development</span>
+            <h3>Healthcare Website</h3>
+            <p>
+              Designed and developed a healthcare website to strengthen user experience
+              and digital presence. Applied responsive design and optimisation for
+              accessibility.
+            </p>
+            <div class="tech-stack">
+              <span>Django</span><span>React</span><span>REST API</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-tag">IT Support</span>
+            <h3>System Troubleshooting Lab</h3>
+            <p>
+              Set up a virtual lab environment to practice hardware diagnostics, software
+              installation, and remote support tools.
+            </p>
+            <div class="tech-stack">
+              <span>Windows</span><span>Networking</span><span>Remote Tools</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-tag">Cybersecurity</span>
+            <h3>Security Awareness Project</h3>
+            <p>
+              Researched and documented common cybersecurity threats and created
+              awareness materials for non-technical users.
+            </p>
+            <div class="tech-stack">
+              <span>Ethical Hacking</span><span>Security</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- ======= END PROJECTS ======= -->
+
+
+    <!-- ======= EXPERIENCE SECTION ======= -->
+    <section id="experience" class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Experience</span>
+          <h2>Work &amp; Practical Experience</h2>
+        </div>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-content">
+              <h3>Junior Software Developer (Internship)</h3>
+              <p class="timeline-place">AVU Department, University of Johannesburg</p>
+              <ul>
                 <li>Developed and maintained responsive web applications using Django and React.</li>
                 <li>Built RESTful APIs and connected frontend systems to backend services.</li>
                 <li>Implemented debugging, testing, and troubleshooting procedures.</li>
                 <li>Supported secure access control and application functionality.</li>
-                <li>Designed and developed a healthcare website to strengthen user experience and digital presence.</li>
-                <li>Applied responsive design and optimisation for accessibility and usability.</li>
-            </ul>
+                <li>Designed and developed a healthcare website to strengthen user experience.</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
+
+      </div>
     </section>
+    <!-- ======= END EXPERIENCE ======= -->
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <h3>Support / Website Development</h3>
-            <p>Designed and developed a healthcare website to strengthen user experience and digital presence. Applied responsive design and optimisation for accessibility and usability.</p>
+
+    <!-- ======= EDUCATION SECTION ======= -->
+    <section id="education" class="section alt-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Education</span>
+          <h2>Academic Background</h2>
         </div>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-content">
+              <h3>NQF Level 4: Systems Development</h3>
+              <p class="timeline-place">Dynamic DNA</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2020</div>
+            <div class="timeline-content">
+              <h3>Grade 12 (Matric)</h3>
+              <p class="timeline-place">Langa Secondary School</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </section>
+    <!-- ======= END EDUCATION ======= -->
 
-    <!-- EDUCATION SECTION -->
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Dynamic DNA</strong> — NQF Level 4: Systems Development</li>
-                <li><strong>Langa Secondary School</strong> — Grade 12 (Matric)</li>
-            </ul>
+
+    <!-- ======= CERTIFICATIONS SECTION ======= -->
+    <section id="certifications" class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Certifications</span>
+          <h2>Certificates &amp; Courses</h2>
         </div>
+
+        <div class="cert-grid">
+          <div class="cert-item"><i class="bi bi-patch-check"></i> Junior Cybersecurity Path</div>
+          <div class="cert-item"><i class="bi bi-patch-check"></i> Ethical Hacking</div>
+          <div class="cert-item"><i class="bi bi-patch-check"></i> Python Essentials</div>
+          <div class="cert-item"><i class="bi bi-patch-check"></i> JavaScript Essentials</div>
+          <div class="cert-item"><i class="bi bi-patch-check"></i> CSS Essentials</div>
+        </div>
+
+      </div>
     </section>
+    <!-- ======= END CERTIFICATIONS ======= -->
 
-    <!-- CERTIFICATIONS SECTION -->
-    <section id="certifications">
-        <div class="container">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Junior Cybersecurity Path</li>
-                <li>Ethical Hacking</li>
-                <li>Python Essentials</li>
-                <li>JavaScript Essentials</li>
-                <li>CSS Essentials</li>
-            </ul>
+
+    <!-- ======= CONTACT SECTION ======= -->
+    <section id="contact" class="section alt-section">
+      <div class="container">
+
+        <div class="section-heading center">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's Work Together</h2>
+          <p>I'm currently open to internship and junior IT support opportunities.</p>
         </div>
+
+        <div class="contact-card">
+
+          <a href="mailto:deshmakwakwa98@gmail.com" class="contact-row">
+            <i class="bi bi-envelope-fill"></i>
+            <span>deshmakwakwa98@gmail.com</span>
+          </a>
+
+          <a href="tel:0661408333" class="contact-row">
+            <i class="bi bi-telephone-fill"></i>
+            <span>066 140 8333</span>
+          </a>
+
+          <div class="contact-row">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Tembisa, Johannesburg, South Africa</span>
+          </div>
+
+          <div class="contact-social">
+            <a href="https://github.com/DASHTECHSOLUTION" target="_blank" rel="noopener" class="btn btn-outline">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="btn btn-outline">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+          </div>
+
+        </div>
+
+      </div>
     </section>
+    <!-- ======= END CONTACT ======= -->
 
-    <!-- ACHIEVEMENTS SECTION -->
-    <section id="achievements">
-        <div class="container">
-            <h2>Achievements</h2>
-            <ul>
-                <li>Church Youth Leader</li>
-                <li>Class Representative and Committee Member</li>
-                <li>Golden Key Society Member</li>
-                <li>Soccer Team Captain</li>
-            </ul>
-        </div>
-    </section>
+  </main>
 
-    <!-- LANGUAGES SECTION -->
-    <section id="languages">
-        <div class="container">
-            <h2>Languages</h2>
-            <ul>
-                <li>English</li>
-                <li>Xitsonga</li>
-                <li>IsiZulu</li>
-            </ul>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Mahlori Makwakwa. Built with HTML, CSS &amp; JavaScript.</p>
-        </div>
-    </footer>
+  <!-- ======= FOOTER ======= -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; <span id="year"></span> Mahlori Makwakwa. All rights reserved.</p>
+      <p>Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
+
+  <!-- Back to top button -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
